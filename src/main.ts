@@ -18,11 +18,8 @@ async function bootstrap() {
 
   app.enableCors();
 
-  //@ts-ignore
   await app.register(fastifyCsrf);
-  //@ts-ignore
   await app.register(helmet);
-  //@ts-ignore
   await app.register(compression, {
     brotliOptions: { params: { [constants.BROTLI_PARAM_QUALITY]: 11 } },
   });
